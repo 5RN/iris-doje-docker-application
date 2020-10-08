@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Export generator="Cache" version="25">
+  <Document name="doje-public-ui.ZPM">
+    <Module>
+      <Name>doje-public-ui</Name>
+      <Version>1.0</Version>
+      <Description>doje-public-ui for IRIS</Description>
+      <Keywords>REST,Full-stack,angular</Keywords>
+      <Packaging>module</Packaging>
+      <Dependencies>
+        <ModuleReference>
+          <Name>doje</Name>
+          <Version>*</Version>
+        </ModuleReference>
+      </Dependencies>
+      <CSPApplication CookiePath="/csp/${namespace}/doje" DefaultTimeout="900" DeployPath="${cspdir}/doje" MatchRoles=":${dbrole}" PasswordAuthEnabled="0" Recurse="1" ServeFiles="1" ServeFilesTimeout="3600" SourcePath="/front-end/dist/doje-public-ui" UnauthenticatedEnabled="1" Url="/csp/${namespace}/doje" UseSessionCookie="2"/>
+      <SourcesRoot>src</SourcesRoot>
+      <Resource Directory="cls" Name="DOJE.PKG"/>
+      <CSPApplication CookiePath="/api/${namespace}/doje/" DefaultTimeout="900" DispatchClass="API.Data.FOIRequest.REST" MatchRoles=":%All" PasswordAuthEnabled="0" Recurse="1" ServeFiles="1" ServeFilesTimeout="3600" UnauthenticatedEnabled="1" Url="/api/${namespace}/doje" UseSessionCookie="2"/>
+      <!--UnitTest Name="/tests" Package="UnitTest" Phase="test"/-->
+    </Module>
+  </Document>
+</Export>

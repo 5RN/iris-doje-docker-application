@@ -1,0 +1,39 @@
+; run installer to create namespace
+do $SYSTEM.OBJ.Load("/opt/doje/Installer.cls", "ck")
+set sc = ##class(App.Installer).setup() 
+new $namespace
+set namespace = "DOJE"
+set $namespace=namespace
+set app = $System.CSP.GetDefaultApp(namespace) _ "/"
+do EnableDeepSee^%SYS.cspServer(app)
+zn "%SYS"
+Do ##class(Security.Users).UnExpireUserPasswords("*")
+
+; create web application to host doje homepage
+;write "Create web application ...",!
+;set webName = "/csp/doje"
+;set webProperties("NameSpace") = namesapce
+;set webProperties("Enabled") = $$$YES
+;set webProperties("Path") = "/usr/irissys/csp/doje"
+;set webProperties("IsNameSpaceDefault") = $$$YES
+;set webProperties("CSPZENEnabled") = $$$YES
+;set webProperties("DeepSeeEnabled") = $$$NO
+;set webProperties("AutheEnabled") = $$$NO
+;set status = ##class(Security.Applications).Create(webName, .webProperties)
+;write:'status $system.Status.DisplayError(status)
+;write "Web application """webName""" was created!",!
+
+; create rest application to interface with frontend
+write "Create web application ...",!
+set webName = "/doje/api2"
+set webProperties("DispatchClass") = "App.Data.FOIRequest.REST" 
+set webProperties("NameSpace") = namespace
+set webProperties("Enabled") = 1
+set webProperties("PasswordAuthEnabled") = 0
+set webProperties("UnauthenticatedEnabled") = 1
+set webProperties("MatchRoles") = ":%All"
+set status = ##class(Security.Applications).Create(webName, .webProperties)
+write !,"Web application "_webName_" has been created!"
+
+; call your initial methods here
+halt

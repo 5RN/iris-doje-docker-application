@@ -1,0 +1,389 @@
+@media print {
+	.topbar, .footer-v1 {
+		display: none;
+	}
+
+	.header .navbar-toggle {
+		display: none;
+	}	
+}
+
+body {
+	font-size: 1.6em;
+}
+
+@-ms-viewport{
+  width: device-width;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight: bold; 
+}
+
+a {
+-ms-word-break: break-all;
+
+     /* Be VERY careful with this, breaks normal words wh_erever */
+     word-break: break-all;
+
+     /* Non standard for webkit */
+     word-break: break-word;
+
+-webkit-hyphens: auto;
+   -moz-hyphens: auto;
+        hyphens: auto;
+}
+
+#skiptocontent a {
+  margin-left: 15px;
+  position: absolute;
+  top: -40px;
+  color: #7c8082;
+  background: transparent;
+  -webkit-transition: top 1s ease-out, background 1s linear;
+  transition: top 1s ease-out, background 1s linear;
+  z-index: 100;
+}
+
+#skiptocontent a:focus {
+	position: static;
+	text-decoration: none !important; 
+	background-color: rgb(238, 238, 238) !important;
+	outline-color: rgb(52, 152, 219) !important;
+	outline-style: auto !important;
+	outline-width: 5px !important;
+	outline-offset: -2px !important;
+}
+
+.latest dt{
+	overflow: visible;
+	width: 20px !important;
+	margin-right: 8px;
+}
+.latest dd{
+	margin-left: 95px;
+	margin-bottom: 5px;
+}
+
+.header .navbar-default .navbar-nav > li > a:hover, .header .navbar-default .navbar-nav > .active > a {
+  border-bottom: solid 2px rgb(52, 152, 219);
+}
+
+.da-slider{
+	  /* max-width: 1263px; */
+}
+
+.breadcrumb {
+	font-size: 0.8em;
+}
+
+.footer address {
+	font-size: 0.9em;
+}
+
+.header .topbar ul.loginbar > li > a, .header .topbar ul.loginbar > li > a:hover {
+	 text-transform: inherit;
+	 font-size: 0.9em;
+	}
+
+.da-slide h2 i {
+	font-size: 1.4em;
+}
+
+.da-slide p {
+	font-size: 1.3em;
+}
+
+.header .navbar-default {
+	background-color: rgb(220, 220, 220);
+	}	
+	
+.header .navbar-brand { 
+	z-index: 1;
+	top: 0px;
+	height: 100%;
+	position: relative;
+	padding: 0 10px 0px;
+}
+	
+.link-list a {
+	font-size: 0.9em;
+	text-transform: inherit;
+}
+
+.da-slide h2 i {
+	text-transform: inherit;
+	}
+
+li a {
+	color: rgb(52, 152, 219);
+}
+
+a {
+	word-wrap: break-word;
+	}
+
+.header .logo {
+	width: 80px;
+}
+
+#logodiv{
+	float: left;
+  	display: table;
+}
+
+#logodiv img{
+	margin: 0px;
+}
+	
+#logoimgdiv {
+	float: left;
+	display: table-cell;
+}
+
+#logotxtdiv {
+	display: table-cell;
+	color: rgb(0, 52, 128);
+	font-size: 0.9em;
+	font-weight: bold;
+	font-family: "Open Sans", Arial, sans-serif;
+}
+
+.fancybox-overlay a:focus {
+	background-color: transparent !important;
+}
+
+a:focus {
+	/* border-color: rgb(255, 0, 0); */
+	/* border-width: 1px; */
+	/* border-style: solid; */
+	/*background-color: #ccc;*/
+	/* outline-color: -webkit-focus-ring-color; */
+	text-decoration: none !important; 
+	background-color: rgb(238, 238, 238) !important;
+	outline-color: rgb(52, 152, 219) !important;
+	outline-style: auto !important;
+	outline-width: 5px !important;
+	outline-offset: -2px !important;
+}
+
+.footer a:focus{
+  color: rgb(52, 152, 219);
+}
+
+
+
+.da-slide .da-img, .da-slide h2 {
+	top: 50px;
+}
+
+.da-slide p {
+	top: 240px;
+}
+
+.header .topbar ul.loginbar {
+	padding:0px;
+}
+
+
+@media (max-width: 495px) {
+	
+#logotxtdiv {
+  font-size: 0.8em;
+}
+	
+	.tab-v1 .nav-tabs a {
+  font-size: 14px;
+  padding: 5px 5px;
+}
+
+}
+
+@media (max-width: 991px) {
+
+.header .topbar {
+	margin-bottom: 0px;
+}
+
+.header .navbar-collapse {
+	margin-top: 0px;
+}
+}
+
+@media (min-width: 992px) {
+	
+.header .navbar-collapse {
+	margin-top: 30px;
+}
+	
+#logodiv{
+	margin: 10px 0px;
+}
+
+}
+
+.da-slider{
+background-image:url(./SliderBG.jpg);
+background-size: cover;
+}
+
+
+@media (min-width: 992px) {		
+	
+	.header .navbar-nav > li > a:focus,	
+	.header .navbar-nav > .active > a:focus {
+		background-color: #blue;
+	}
+	
+	.header .open > .dropdown-menu {
+		display: block;
+	}
+	
+	/*	
+.header .dropdown-submenu a:focus + .dropdown-menu {
+  display: block;
+}
+*/
+}
+
+
+/*--------------------------------------------------
+    [5. Header - Quick Search]
+----------------------------------------------------*/
+
+/*Quick Search Box
+------------------------------------*/
+.header .nav > li > .quicksearch {
+	color: #aaa;
+	cursor: pointer;
+	min-width: 35px;
+	font-size: 15px;
+	text-align: center;
+	background: #f7f7f7;
+	padding: 11px 0 12px;
+	display: inline-block;
+	border-bottom: solid 2px #aaa;
+}
+
+@media (min-width: 992px) {
+	.header .nav > li > .quicksearch {
+		bottom: -2px;
+		position: relative;
+	}
+}
+
+.header .nav > li > .quicksearch:hover {
+	color: #2980b9;
+	background: #f7f7f7;
+	border-bottom-color: #2980b9;
+}
+
+@media (max-width: 991px) {
+	.header .nav > li > .quicksearch {
+		color: #999;
+		width: 35px;
+		height: 34px;
+		text-align: left;
+		background: #eee;
+		line-height: 12px;
+		text-align: center;
+		margin: 5px 10px 0;
+		border-bottom: none;
+	}
+
+	.header .nav > li > .quicksearch:hover {
+		background: #5fb611;
+		color: #fff !important;
+	}
+}
+
+.da-slide p {
+  line-height: 29px;
+}
+
+@media (max-width: 450px) {
+.da-slide p {
+  display: block;
+}
+}
+
+	.fancybox-title {
+	font-weight: bold;
+	background-color: black;
+	padding: 5px;
+	text-align: center;
+}
+
+.form-control-feedback {
+   text-align: inherit;
+}
+.btn-info {
+  color: #ffffff;
+  background-color: #033c73;
+  border-color: #033c73;
+}
+.social { 
+float: left; 
+font-size: 1.2em; 
+color: #000033; 
+font-weight: bold; 
+width: 100%; 
+/*background: url(./images/dots.gif) left bottom no-repeat;*/ 
+padding: 15px 0px 15px 0px;
+ }
+
+.social span { 
+float: left;
+padding: 5px 20px 10px 5px;
+font-size: initial;
+ }
+
+.social ul { 
+float: left; 
+margin: 0px; 
+padding: 0px; 
+ }
+        
+.social ul li { 
+background: url(./images/social-li.gif) left top no-repeat;
+list-style-type: none;
+float: left; 
+padding: 0px 7px 0px 7px; 
+}
+
+.social ul li:first-child { background-image: none; }
+.social ul li a.twitter 
+{ background: url(./images/twitter.gif) left top no-repeat;
+ width: 24px; 
+ height: 24px; 
+ float: left; 
+ }
+
+ .social ul li a.rss_feed {
+ background: url(./images/rss-icon.gif) left top no-repeat; 
+ width: 24px; 
+ height: 24px; 
+ float: left; }
+ 
+ .social ul li a.youtube { 
+ background: url(./images/you-tube.gif) left top no-repeat; 
+ width: 25px; 
+ height: 25px; 
+ float: left; }
+            
+.social ul li a.flickr { 
+background: url(./images/flickr.gif) left top no-repeat;
+width: 24px;
+height: 24px;
+float: left;
+}
+
+.social ul li.last {
+ background: none;
+ }
+ 
+ .external-links {
+ 	text-align: center;
+ 	line-height: 6;
+ }
