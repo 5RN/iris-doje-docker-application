@@ -23,7 +23,7 @@ Run Angular front-end and IRIS backend containers in a single project:
 $ docker-compose up -d
 ```
 
-Once the containers are up and running, go to http://localhost:9000 to get to the UI home page
+Once the containers are up and running, go to http://localhost:4200 to get to the UI home page
 
 
 IRIS backend container will provide the REST endpoint to serve the angular frontend.

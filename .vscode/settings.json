@@ -6,11 +6,11 @@
       },
     "objectscript.conn" :{
       "ns": "DOJE",
-      "active": false,
+      "active": true,
       "username": "_SYSTEM",
       "password": "SYS",
       "docker-compose": {
-        "service": "iris",
+        "service": "backend",
         "internalPort": 52773
       }
     }
